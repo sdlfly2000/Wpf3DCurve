@@ -3,10 +3,49 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Wpf3DCurve"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        MouseMove="OnMouseMove" MouseWheel="OnMouseWheel">
     <Grid>
-
+        <Viewport3D>
+            <Viewport3D.Camera>
+                <PerspectiveCamera Position=" 6 5 4" LookDirection="-6 -5 -4"/>
+            </Viewport3D.Camera>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <DirectionalLight Direction="-1 -1 -1"/>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <GeometryModel3D>
+                        <GeometryModel3D.Geometry>
+                            <MeshGeometry3D
+                                Positions="0,0,0 1,0,0 1,1,0 0,1,0 0,0,1 1,0,1 1,1,1 0,1,1"
+                                TriangleIndices="0 1 3 1 2 3  0 4 3 4 7 3  4 6 7 4 5 6  0 4 1 1 4 5  1 2 6 6 5 1  2 3 7 7 6 2"
+                            />
+                        </GeometryModel3D.Geometry>
+                        <GeometryModel3D.Material>
+                            <DiffuseMaterial>
+                                <DiffuseMaterial.Brush>
+                                    <SolidColorBrush Color = "Brown"/>
+                                </DiffuseMaterial.Brush>
+                            </DiffuseMaterial>
+                        </GeometryModel3D.Material>
+                    </GeometryModel3D>
+                </ModelVisual3D.Content>
+                <ModelVisual3D.Transform>
+                    <Transform3DGroup>
+                        <RotateTransform3D>
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D x:Name="Roate3DOjbect" Axis="1 1 1"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                        <ScaleTransform3D x:Name="Scale3DObject">
+                        </ScaleTransform3D>
+                    </Transform3DGroup>
+                </ModelVisual3D.Transform>
+            </ModelVisual3D>
+        </Viewport3D>
     </Grid>
 </Window>
