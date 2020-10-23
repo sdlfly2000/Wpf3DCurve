@@ -11,8 +11,6 @@ namespace Wpf3DCurve
         private double _startPositionX = 0d; 
         private double _startPositionY = 0d; 
 
-        private bool isLeftButtonDown = false;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -23,7 +21,8 @@ namespace Wpf3DCurve
             var currentPosition = e.GetPosition(this);
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-                Roate3DOjbect.Angle = currentPosition.X - _startPositionX;
+                Roate3DOjbectH.Angle = currentPosition.X - _startPositionX;
+                Roate3DOjbectV.Angle = currentPosition.Y - _startPositionY;
             }
             else
             {

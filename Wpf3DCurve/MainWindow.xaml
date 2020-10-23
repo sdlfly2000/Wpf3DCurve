@@ -28,7 +28,7 @@
                         <GeometryModel3D.Material>
                             <DiffuseMaterial>
                                 <DiffuseMaterial.Brush>
-                                    <SolidColorBrush Color = "Brown"/>
+                                    <SolidColorBrush Color = "BlueViolet"/>
                                 </DiffuseMaterial.Brush>
                             </DiffuseMaterial>
                         </GeometryModel3D.Material>
@@ -38,9 +38,15 @@
                     <Transform3DGroup>
                         <RotateTransform3D>
                             <RotateTransform3D.Rotation>
-                                <AxisAngleRotation3D x:Name="Roate3DOjbect" Axis="1 1 1"/>
+                                <AxisAngleRotation3D x:Name="Roate3DOjbectH" Axis="1 1 1"/>
                             </RotateTransform3D.Rotation>
                         </RotateTransform3D>
+                        <RotateTransform3D>
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D x:Name="Roate3DOjbectV" Axis="1 1 1"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+
                         <ScaleTransform3D x:Name="Scale3DObject">
                         </ScaleTransform3D>
                     </Transform3DGroup>
